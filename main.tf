@@ -1,5 +1,6 @@
 locals {
   bucket_name = "carlos-ground-jobworkz"
+  bucket_name_2 = "carlos-ground-jobworkz-3"
 }
 
 
@@ -12,3 +13,11 @@ resource "aws_s3_bucket" "my_bucket" {
   }
 }
 
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = local.bucket_name_2
+  
+  tags = {
+    Name        = local.bucket_name_2
+    Environment = var.region
+  }
+}

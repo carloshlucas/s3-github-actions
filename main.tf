@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "my_bucket" {
   }
 }
 
-resource "aws_s3_bucket" "my_bucket" {
+resource "aws_s3_bucket" "my_bucket2" {
   bucket = local.bucket_name_2
   
   tags = {
